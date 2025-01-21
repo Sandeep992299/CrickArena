@@ -156,7 +156,7 @@ fun LoginScreen(navController: NavController) {
             val email = remember { mutableStateOf("") }
             val password = remember { mutableStateOf("") }
 
-            // Email TextField
+            // Email TextField with
             TextField(
                 value = email.value,
                 onValueChange = { email.value = it },
