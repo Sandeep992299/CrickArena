@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CrickArina</string>
+
+
+    <string name="Balls">Balls</string>
+    <string name="Batts">Bats</string>
+    <string name="Gears">Gear</string>
+    <string name="Proms">Promos</string>
+    <string name="item_macchiato">Macchiato</string>
+
+    <!-- Item Prices -->
+    <string name="price_espresso">700.00</string>
+    <string name="price_latte">790.00</string>
+    <string name="price_cappuccino">450.00</string>
+    <string name="price_mocha">500.00</string>
+    <string name="price_macchiato">650.00</string>
+</resources>
