@@ -86,7 +86,7 @@ fun ProfilePage() {
         Card(
             modifier = Modifier.fillMaxWidth(),
             shape = MaterialTheme.shapes.medium,
-            colors = CardDefaults.cardColors(MaterialTheme.colorScheme.surfaceBright)
+            colors = CardDefaults.cardColors(MaterialTheme.colorScheme.secondary)
         ) {
             Column(
                 modifier = Modifier
