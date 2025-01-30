@@ -24,6 +24,7 @@ import com.example.crickarina.Screen.MainScreen
 import com.example.crickarina.Screen.ProductScreen
 import com.example.crickarina.Screen.ProfilePage
 import com.example.crickarina.Screen.SignIn
+import com.example.crickarina.Screen.SignUpScreen
 
 @Composable
 fun BottomNavigationScreen(modifier: Modifier = Modifier) {
@@ -75,5 +76,6 @@ fun contentScreen(modifier: Modifier = Modifier, selectedIndex: Int) {
         1 -> ProductScreen()
         2 -> CartPage()
         3 -> ProfilePage()
+        5 -> SignUpScreen()
     }
 }
