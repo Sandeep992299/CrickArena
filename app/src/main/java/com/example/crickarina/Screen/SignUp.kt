@@ -106,7 +106,7 @@ fun SignUpScreen() {
                     // Display the selected image if available, otherwise show a placeholder
                     selectedImageUri.value?.let { uri ->
                         Image(
-                            painter = painterResource(id = R.drawable.k11),
+                            painter = painterResource(id = R.drawable.man),
                             contentDescription = "Profile Image",
                             modifier = Modifier.fillMaxSize(),
                             contentScale = ContentScale.Crop
@@ -233,6 +233,7 @@ fun SignUpScreen() {
                     text = "Already have an account? Sign In",
                     modifier = Modifier.clickable {
                         //navController.navigate("login")
+
                     },
                     color = MaterialTheme.colorScheme.primary
                 )
