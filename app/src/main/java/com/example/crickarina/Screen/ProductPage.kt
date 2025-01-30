@@ -70,17 +70,17 @@ fun ProductScreen() {
     val scrollState = rememberScrollState()
 
     Scaffold(
-        modifier = Modifier.fillMaxSize() // Ensures full screen coverage
+        modifier = Modifier.fillMaxSize()
     ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(paddingValues) // Using paddingValues for content padding
+                .padding(paddingValues)
                 .verticalScroll(scrollState),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Welcome Text with "Cafe" and "Solace" styled separately and Cart icon on the right
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -92,12 +92,12 @@ fun ProductScreen() {
                     text = buildAnnotatedString {
                         withStyle(
                             style = SpanStyle(
-                                color = Color(0xFF000000),
+                                color = Color.Yellow,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 34.sp
                             )
                         ) {
-                            append("Cricket ")
+                            append("Crick ")
                         }
                         withStyle(
                             style = SpanStyle(
@@ -106,7 +106,7 @@ fun ProductScreen() {
                                 fontSize = 34.sp
                             )
                         ) {
-                            append("Arina")
+                            append("Arena")
                         }
                     }
                 )
@@ -118,6 +118,18 @@ fun ProductScreen() {
                     Icon(Icons.Filled.Person, contentDescription = "View Cart")
                 }
             }
+
+            Text(
+                text = "Categories",
+                style = MaterialTheme.typography.titleMedium.copy(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 30.sp
+                ),
+                modifier = Modifier
+                    .padding(15.dp)
+                    .align(Alignment.Start)
+
+            )
 
 
 
@@ -131,11 +143,11 @@ fun ProductScreen() {
 
             BestSellerList(BestIterms = BestSeller22().loadBestNavigationIterm())
             Spacer(modifier = Modifier.height(10.dp))
-//
+
 
 
             Text(
-                text = "Koorurra",
+                text = "Bats",
                 style = MaterialTheme.typography.titleMedium.copy(
                     fontWeight = FontWeight.Bold,
                     fontSize = 20.sp // Set the desired font size here
@@ -146,12 +158,20 @@ fun ProductScreen() {
 
             )
             FooditemsList(foodList = QuickNavigationIterm().loadQuickNavigationIterm())
+            Spacer(modifier = Modifier.height(10.dp))
 
+            Text(
+                text = "Balls",
+                style = MaterialTheme.typography.titleMedium.copy(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp // Set the desired font size here
+                ),
+                modifier = Modifier
+                    .padding(vertical = 8.dp)
+                    .align(Alignment.Start)
 
-
-
-
-
+            )
+            FooditemsList(foodList = QuickNavigationIterm().loadQuickNavigationIterm())
             Spacer(modifier = Modifier.height(100.dp))
         }
 

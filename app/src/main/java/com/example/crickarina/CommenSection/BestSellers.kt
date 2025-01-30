@@ -35,7 +35,7 @@ fun MainsCard2(
         modifier = modifier
             .padding(horizontal = 8.dp, vertical = 8.dp) // Reduced padding slightly for compactness
             .width(130.dp)
-            .height(190.dp) // Reduced height slightly to bring elements closer
+            .height(200.dp)
             .clickable { onClick() }
             .shadow(
                 elevation = 8.dp,
@@ -53,19 +53,20 @@ fun MainsCard2(
                 contentDescription = null,
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
-                    .height(110.dp) // Reduced height of the image to save space
+                    .height(120.dp) // Reduced height of the image to save space
                     .fillMaxWidth()
                     .shadow(
                         elevation = 8.dp,
                         shape = RoundedCornerShape(10.dp), // Updated for more rounded corners
                         ambientColor = Color.Black,
-                        spotColor = Color.Black
+                        spotColor = Color.Yellow
                     ),
             )
             Text(
                 text = title,
                 fontSize = 16.sp, // Slightly smaller text size for better layout fit
                 style = MaterialTheme.typography.labelMedium,
+                color = Color.Black,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 4.dp) // Reduced padding to minimize space
@@ -73,7 +74,7 @@ fun MainsCard2(
             Text(
                 text = "Rs $price",
                 fontSize = 16.sp,
-                color = Color.Black,
+                color = Color.Red,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier

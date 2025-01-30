@@ -10,27 +10,27 @@ class QuickNavigationIterm {
             Quicknavigation2(
                 R.drawable.bats,
                 R.string.Batts,
-                R.string.price_latte,
+                R.string.price_bat3,
             ),
             Quicknavigation2(
                 R.drawable.balls,
                 R.string.Balls,
-                R.string.price_latte,
+                R.string.price_bat1,
             ),
             Quicknavigation2(
                 R.drawable.gear,
                 R.string.Gears,
-                R.string.price_latte,
+                R.string.price_bat1,
             ),
             Quicknavigation2(
                 R.drawable.promo1,
                 R.string.Proms,
-                R.string.price_latte,
+                R.string.price_bat4,
             ),
-                    Quicknavigation2(
-                    R.drawable.gear,
-            R.string.Gears,
-            R.string.price_latte,
+            Quicknavigation2(
+                R.drawable.gear,
+                R.string.Gears,
+            R.string.price_bat3,
         ),
         )
     }

@@ -34,16 +34,11 @@ fun MainsCard(
 ) {
     Card(
         modifier = modifier
-            .padding(horizontal = 8.dp, vertical = 8.dp) // Reduced padding slightly for compactness
+            .padding(horizontal = 8.dp, vertical = 8.dp)
             .width(150.dp)
-            .height(190.dp) // Reduced height slightly to bring elements closer
-            .clickable { onClick() }
-            .shadow(
-                elevation = 8.dp,
-                shape = RoundedCornerShape(8.dp),
-//                ambientColor = Color.Black,
-//                spotColor = Color.Black
-            ),
+            .height(190.dp)
+            .clickable { onClick() },
+
         colors = CardDefaults.cardColors(containerColor = backgroundColor)
     ) {
         Column(
@@ -58,30 +53,31 @@ fun MainsCard(
                     .fillMaxWidth()
                     .shadow(
                         elevation = 8.dp,
-                        shape = RoundedCornerShape(10.dp), // Updated for more rounded corners
+                        shape = RoundedCornerShape(10.dp),
 //                        ambientColor = Color.Black,
 //                        spotColor = Color.Black
                     ),
             )
             Text(
                 text = title,
-                fontSize = 16.sp, // Slightly smaller text size for better layout fit
+                fontSize = 16.sp,
+                color = Color.Black,
                 style = MaterialTheme.typography.labelMedium,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 4.dp) // Reduced padding to minimize space
+                    .padding(top = 4.dp)
             )
             Text(
                 text = "Rs $price",
                 fontSize = 16.sp,
-                color = Color.Black,
+                color = Color.Red,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 4.dp) // Reduced vertical padding
+                    .padding(vertical = 4.dp)
             )
-            Spacer(modifier = Modifier.height(8.dp)) // Added a small spacer for better alignment
+            Spacer(modifier = Modifier.height(8.dp))
 
 
         }

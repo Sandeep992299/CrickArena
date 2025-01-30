@@ -7,6 +7,7 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -30,8 +31,8 @@ import com.example.crickarina.Screen.SignUpScreen
 fun BottomNavigationScreen(modifier: Modifier = Modifier) {
     val navItermList = listOf(
         NavIterm("Home", Icons.Default.Home),
-        NavIterm("Product", Icons.Default.Search),
-        NavIterm("WishList", Icons.Default.List),
+        NavIterm("Category", Icons.Default.List),
+        NavIterm("Cart", Icons.Default.ShoppingCart),
         NavIterm("Profile", Icons.Default.Person),
     )
 

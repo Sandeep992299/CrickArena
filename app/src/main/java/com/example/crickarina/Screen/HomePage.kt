@@ -69,17 +69,17 @@ fun MainScreen() {
     val scrollState = rememberScrollState()
 
     Scaffold(
-        modifier = Modifier.fillMaxSize() // Ensures full screen coverage
+        modifier = Modifier.fillMaxSize()
     ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(paddingValues) // Using paddingValues for content padding
+                .padding(paddingValues)
                 .verticalScroll(scrollState),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Welcome Text with "Cafe" and "Solace" styled separately and Cart icon on the right
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -91,12 +91,12 @@ fun MainScreen() {
                     text = buildAnnotatedString {
                         withStyle(
                             style = SpanStyle(
-                                color = Color(0xFF000000),
+                                color = Color.Yellow,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 34.sp
                             )
                         ) {
-                            append("Cricket ")
+                            append("Crick ")
                         }
                         withStyle(
                             style = SpanStyle(
@@ -105,7 +105,7 @@ fun MainScreen() {
                                 fontSize = 34.sp
                             )
                         ) {
-                            append("Arina")
+                            append("Arena")
                         }
                     }
                 )
@@ -166,12 +166,12 @@ fun MainScreen() {
                 contentScale = ContentScale.Crop
             )
 
-            // Signature Items Section
+            // Best Sellers Section
             Text(
                 text = "Best Sellers",
                 style = MaterialTheme.typography.titleMedium.copy(
                     fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp // Set the desired font size here
+                    fontSize = 20.sp
                 ),
                 modifier = Modifier
                     .padding(vertical = 8.dp)
@@ -187,21 +187,16 @@ BestSellerList(BestIterms = BestSeller22().loadBestNavigationIterm())
                 text = "Kookaburra",
                 style = MaterialTheme.typography.titleMedium.copy(
                     fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp // Set the desired font size here
+                    fontSize = 20.sp
                 ),
                 modifier = Modifier
                     .padding(vertical = 8.dp)
                     .align(Alignment.Start)
 
             )
-                        FooditemsList(foodList = QuickNavigationIterm().loadQuickNavigationIterm())
-
-
-
-
-
-
+            BestSellerList(BestIterms = BestSeller22().loadBestNavigationIterm())
             Spacer(modifier = Modifier.height(100.dp))
+
         }
 
 

@@ -7,11 +7,18 @@
     <string name="Gears">Gear</string>
     <string name="Proms">Promos</string>
     <string name="item_macchiato">Macchiato</string>
+    <string name="bat1">Kookaburra Khuna 51</string>
+    <string name="bat2">Kookaburra Aura</string>
+    <string name="bat3">Kookaburra Khuna 2.0</string>
+    <string name="bat4">Kookaburra Khuna 6.1</string>
+    <string name="bat5">SS Gladiator</string>
+    <string name="bat6">SS Sky Fire</string>
+    <string name="bat7">SS Limited Edition</string>
 
     <!-- Item Prices -->
-    <string name="price_espresso">700.00</string>
-    <string name="price_latte">790.00</string>
-    <string name="price_cappuccino">450.00</string>
-    <string name="price_mocha">500.00</string>
-    <string name="price_macchiato">650.00</string>
+    <string name="price_bat1">49900.00</string>
+    <string name="price_bat2">52990.00</string>
+    <string name="price_bat3">45900.00</string>
+    <string name="price_bat4">52900.00</string>
+    <string name="price_ma">650.00</string>
 </resources>
