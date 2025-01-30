@@ -184,7 +184,7 @@ fun ProfilePage() {
             },
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(
-                containerColor = MaterialTheme.colorScheme.scrim,
+                containerColor = MaterialTheme.colorScheme.primary,
                 contentColor = Color.White
             )
         ) {
