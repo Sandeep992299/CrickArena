@@ -1,4 +1,5 @@
 package com.example.crickarina.CommenSection
+import android.util.Log.d
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -33,7 +34,7 @@ fun MainsCard2(
 ) {
     Card(
         modifier = modifier
-            .padding(horizontal = 8.dp, vertical = 8.dp) // Reduced padding slightly for compactness
+            .padding(horizontal = 8.dp, vertical = 8.dp)
             .width(130.dp)
             .height(200.dp)
             .clickable { onClick() }
@@ -46,30 +47,30 @@ fun MainsCard2(
         colors = CardDefaults.cardColors(containerColor = backgroundColor)
     ) {
         Column(
-            modifier = Modifier.padding(8.dp) // Added padding inside the column
+            modifier = Modifier.padding(8.dp)
         ) {
             Image(
                 painter = painterResource(imageResourceId),
                 contentDescription = null,
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
-                    .height(120.dp) // Reduced height of the image to save space
+                    .height(120.dp)
                     .fillMaxWidth()
                     .shadow(
                         elevation = 8.dp,
-                        shape = RoundedCornerShape(10.dp), // Updated for more rounded corners
+                        shape = RoundedCornerShape(10.dp),
                         ambientColor = Color.Black,
                         spotColor = Color.Yellow
                     ),
             )
             Text(
                 text = title,
-                fontSize = 16.sp, // Slightly smaller text size for better layout fit
+                fontSize = 16.sp,
                 style = MaterialTheme.typography.labelMedium,
                 color = Color.Black,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 4.dp) // Reduced padding to minimize space
+                    .padding(top = 4.dp)
             )
             Text(
                 text = "Rs $price",
@@ -79,10 +80,9 @@ fun MainsCard2(
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 4.dp) // Reduced vertical padding
+                    .padding(vertical = 4.dp)
             )
-            Spacer(modifier = Modifier.height(8.dp)) // Added a small spacer for better alignment
-
+            Spacer(modifier = Modifier.height(8.dp))
 
         }
 

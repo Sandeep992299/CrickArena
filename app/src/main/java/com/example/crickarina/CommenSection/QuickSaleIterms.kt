@@ -1,6 +1,7 @@
 package com.example.crickarina.CommenSection
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -37,6 +38,7 @@ fun MainsCard(
             .padding(horizontal = 8.dp, vertical = 8.dp)
             .width(150.dp)
             .height(190.dp)
+            .border(4.dp, Color. Magenta)
             .clickable { onClick() },
 
         colors = CardDefaults.cardColors(containerColor = backgroundColor)

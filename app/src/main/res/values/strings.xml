@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">CrickArina</string>
+    <string name="app_name">CrickArena</string>
 
 
     <string name="Balls">Balls</string>
     <string name="Batts">Bats</string>
     <string name="Gears">Gear</string>
     <string name="Proms">Promos</string>
+    <string name="pack">Packages</string>
     <string name="item_macchiato">Macchiato</string>
     <string name="bat1">Kookaburra Khuna 51</string>
     <string name="bat2">Kookaburra Aura</string>

@@ -36,6 +36,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Shapes
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -61,12 +62,22 @@ import com.example.crickarina.Data.QuickNavigationIterm
 import com.example.crickarina.Model.BestSeller2
 import com.example.crickarina.Model.Quicknavigation2
 import com.example.crickarina.R
+import kotlinx.coroutines.delay
 
 
 @Composable
 fun MainScreen() {
     val searchQuery = remember { mutableStateOf("") }
     val scrollState = rememberScrollState()
+    val bannerImages = listOf(R.drawable.promo1, R.drawable.promo2)
+    var currentBannerIndex by remember { mutableStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(3000)
+            currentBannerIndex = (currentBannerIndex + 1) % bannerImages.size
+        }
+    }
 
     Scaffold(
         modifier = Modifier.fillMaxSize()
@@ -156,13 +167,9 @@ fun MainScreen() {
 
             // Banner Section
             Image(
-                painter = painterResource(R.drawable.promo2),
+                painter = painterResource(bannerImages[currentBannerIndex]),
                 contentDescription = "Banner",
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(400.dp)
-                    .padding(4.dp)
-                    .clip(RoundedCornerShape(16.dp)),
+                modifier = Modifier.fillMaxWidth().height(400.dp).clip(RoundedCornerShape(16.dp)),
                 contentScale = ContentScale.Crop
             )
 
@@ -240,6 +247,8 @@ fun BestIterm(foodPictures: BestSeller2, modifier: Modifier) {
     )
 }
 
+
+
 @Composable
 fun BestSellerList(BestIterms: List<BestSeller2>) {
     val limitedFooditem = BestIterms.take(5)
@@ -257,7 +266,7 @@ fun BestSellerList(BestIterms: List<BestSeller2>) {
 
 
 
-// creating a Category bar for hold chips
+// creating a Category bar
 @Composable
 fun CategoryBar(
     modifier: Modifier = Modifier,

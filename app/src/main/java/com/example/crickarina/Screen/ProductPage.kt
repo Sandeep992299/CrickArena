@@ -157,7 +157,7 @@ fun ProductScreen() {
                     .align(Alignment.Start)
 
             )
-            FooditemsList(foodList = QuickNavigationIterm().loadQuickNavigationIterm())
+            BestSellerList(BestIterms = BestSeller22().loadBestNavigationIterm())
             Spacer(modifier = Modifier.height(10.dp))
 
             Text(

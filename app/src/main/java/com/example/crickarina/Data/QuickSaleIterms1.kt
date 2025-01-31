@@ -28,8 +28,8 @@ class QuickNavigationIterm {
                 R.string.price_bat4,
             ),
             Quicknavigation2(
-                R.drawable.gear,
-                R.string.Gears,
+                R.drawable.pack,
+                R.string.pack,
             R.string.price_bat3,
         ),
         )

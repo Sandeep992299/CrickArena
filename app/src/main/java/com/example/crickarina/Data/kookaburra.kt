@@ -4,7 +4,7 @@ import com.example.crickarina.Model.kookabu
 import com.example.crickarina.R
 
 class kooka {
-    fun loadBestNavigationIterm1 ():List<kookabu>{
+    fun loadKooka ():List<kookabu>{
         return listOf<kookabu>(
             kookabu(
                 R.drawable.ssglad,
