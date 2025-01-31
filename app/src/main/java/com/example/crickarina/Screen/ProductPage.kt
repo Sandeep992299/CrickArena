@@ -139,6 +139,19 @@ fun ProductScreen() {
             Spacer(modifier = Modifier.height(10.dp))
 
 
+            Text(
+                text = "Best Sellers",
+                style = MaterialTheme.typography.titleMedium.copy(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp // Set the desired font size here
+                ),
+                modifier = Modifier
+                    .padding(vertical = 8.dp)
+                    .align(Alignment.Start)
+            )
+
+
+
 
 
             BestSellerList(BestIterms = BestSeller22().loadBestNavigationIterm())
@@ -159,6 +172,8 @@ fun ProductScreen() {
             )
             BestSellerList(BestIterms = BestSeller22().loadBestNavigationIterm())
             Spacer(modifier = Modifier.height(10.dp))
+
+
 
             Text(
                 text = "Balls",

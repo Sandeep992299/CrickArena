@@ -9,7 +9,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.compose.primaryContainerDark
 
 @Composable
 fun CartPage() {
@@ -81,6 +84,60 @@ fun CartPage() {
         }
 
         Spacer(modifier = Modifier.height(16.dp))
+
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(15.dp)
+
+        ) {
+
+            Spacer(modifier = Modifier.height(16.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text("Delivery Charge", style = MaterialTheme.typography.bodyLarge)
+                Text("Rs.0", style = MaterialTheme.typography.bodyLarge)
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text("Discount", style = MaterialTheme.typography.bodyLarge)
+                Text("Rs.0", style = MaterialTheme.typography.bodyLarge)
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text("Taxes", style = MaterialTheme.typography.bodyLarge)
+                Text("Rs.0", style = MaterialTheme.typography.bodyLarge)
+            }
+            Spacer(modifier = Modifier.height(36.dp))
+
+            Divider()
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text("Sub Total",  fontSize = 19.sp, fontWeight = FontWeight.SemiBold)
+                Text("Rs.0",  fontSize = 19.sp, fontWeight = FontWeight.SemiBold, color = primaryContainerDark)
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Divider()
+            Spacer(modifier = Modifier.height(36.dp))
+
+
+        }
 
         // Clear button to clear the wishlist
         Button(
