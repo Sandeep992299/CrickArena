@@ -38,7 +38,7 @@ fun MainsCard(
             .padding(horizontal = 8.dp, vertical = 8.dp)
             .width(150.dp)
             .height(190.dp)
-            .border(4.dp, Color. Magenta)
+            .border(2.dp, Color. Yellow)
             .clickable { onClick() },
 
         colors = CardDefaults.cardColors(containerColor = backgroundColor)

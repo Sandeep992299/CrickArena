@@ -37,12 +37,13 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.crickarina.R
 
 
 // Login screen
 @Composable
-fun SignIn() {
+fun SignIn(navController: NavController) {
     val email = remember { mutableStateOf("") }
     val password = remember { mutableStateOf("") }
 
@@ -123,7 +124,7 @@ fun SignIn() {
 
             // Sign In Button
             Button(
-                onClick = {  },  // Navigate to Home
+                onClick = { navController.navigate("mainscreen") },  // Navigate to Home
                 modifier = Modifier
                     .width(300.dp)
                     .padding(6.dp),
@@ -136,7 +137,7 @@ fun SignIn() {
 
             // Skip Button
             Button(
-                onClick = {  }, // Navigate to Home
+                onClick = { navController.navigate("mainscreen") }, // Navigate to Home
                 modifier = Modifier
                     .width(300.dp)
                     .padding(8.dp),

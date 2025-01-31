@@ -55,6 +55,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.crickarina.CommenSection.MainsCard
 import com.example.crickarina.CommenSection.MainsCard2
 import com.example.crickarina.Data.BestSeller22
@@ -66,11 +67,12 @@ import kotlinx.coroutines.delay
 
 
 @Composable
-fun MainScreen() {
+fun MainScreen(navController: NavController) {
     val searchQuery = remember { mutableStateOf("") }
     val scrollState = rememberScrollState()
     val bannerImages = listOf(R.drawable.promo1, R.drawable.promo2)
     var currentBannerIndex by remember { mutableStateOf(0) }
+    val bestSellers = BestSeller22().loadBestNavigationIterm()
 
     LaunchedEffect(Unit) {
         while (true) {
@@ -184,6 +186,7 @@ fun MainScreen() {
                     .padding(vertical = 8.dp)
                     .align(Alignment.Start)
             )
+
 
 BestSellerList(BestIterms = BestSeller22().loadBestNavigationIterm())
             Spacer(modifier = Modifier.height(10.dp))
